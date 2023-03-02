@@ -77,6 +77,6 @@ variable "health_check_path" {
   default     = "/health"
 }
 
-variable "tsl_certificate_arn" {
-  description = "The ARN of the certificate that the ALB uses for https"
-}
+# variable "tsl_certificate_arn" {
+#   description = "The ARN of the certificate that the ALB uses for https"
+# }
