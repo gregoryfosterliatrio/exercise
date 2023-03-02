@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Example demo</title>
+    <meta name="description" content="example demo" />
+    <meta name="author" content="Gregory Foster" />
+    <link href="css/impress-common.css" rel="stylesheet" />
+    <link href="css/presentation.css" rel="stylesheet" />
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!-- Some images that are fixed to background in the css -->
+<img id="aws-image" class="bg" src="images/aws.png">
+<img id="docker-image" class="bg" src="images/docker.png">
+<img id="terraform-image" class="bg" src="images/tf.png">
+<img id="github-image" class="bg" src="images/github.png">
+
+
+
+<div id="impress" data-transition-duration="1000">
+
+    <div id="considerations" class="step" data-scale="2" data-x="2000" data-y="8000">
+        <h1>Initial considerations</h1>
+            <ul>
+                <li>Source code repository</li>
+                <li>CI tool</li>
+                <li>Cloud provider</li>
+                <li>Networking</li>
+                <li>Artifact Repository</li>
+                <li>File storage</li>
+                <li>SoPs</li>
+                <li>Architecture</li>
+                <li>Data management</li>
+            </ul>
+    
+        <div class="notes">
+            Looking at the problem I like to consider the tools required for the solution space. 
+            Another way to think about it is what questions does the problem ask that the solution needs to provide.
+        </div>
+
+    </div>
+
+    
+    <div id="github" class="step" data-x="4000" data-y="6000" data-scale="1">
+        <h1>github</h1>
+
+        <ul>
+            <li>How many repositories?</li>
+            <li>Why github?</li>
+        </ul>
+
+        <div class="notes">
+            I chose to use many repositories because that is what I am most familiar with. There are pros and cons for this choice. 
+            In a small PoC with many moving parts it allows to think about isolation easier.
+            I can also host this presentation there!
+            I wanted to try github actions
+        </div>
+
+    </div>
+    
+    <div id="aws" class="step" data-x="6000" data-y="6000" data-scale="1">
+        <h1>AWS</h1>
+
+        <ul>
+            <li>What to consider</li>
+            <li>Why AWS?</li>
+        </ul>
+
+        <div class="notes">
+            There are several reasons why you might choose AWS (Amazon Web Services) as your cloud service provider:
+
+            Breadth and Depth of Services: AWS offers a wide range of services that cover compute, storage, database, analytics, machine learning, security, and more. These services are constantly evolving, with new ones being added regularly.
+
+            Global Infrastructure: AWS has a vast global infrastructure with regions and availability zones in different parts of the world. This allows you to deploy your applications and services closer to your customers, improving performance and reducing latency.
+
+            Scalability: AWS allows you to scale your applications and services up or down based on demand. You can easily provision resources when you need them and deprovision them when you don't, saving costs.
+
+            Security and Compliance: AWS provides robust security features and compliance certifications to protect your data and meet regulatory requirements.
+
+            Reliability and Availability: AWS offers high availability and uptime through its global infrastructure and redundancy features, ensuring that your applications and services are always available.
+
+            Cost-Effective: AWS offers a pay-as-you-go pricing model, which means you only pay for what you use. This can help reduce costs and increase efficiency.
+
+            Partner Ecosystem: AWS has a large and vibrant partner ecosystem, including independent software vendors (ISVs), system integrators (SIs), and managed service providers (MSPs). This can help you accelerate your cloud journey and get access to specialized expertise.
+
+            Overall, AWS offers a comprehensive and reliable set of cloud services that can help you innovate faster, reduce costs, and improve agility.
+        </div>
+
+    </div>
+
+    <div id="terraform" class="step" data-x="8000" data-y="6000" data-scale="1">
+        <h1>Terraform</h1>
+
+        <ul>
+            <li>What to consider</li>
+            <li>Why terraform?</li>
+        </ul>
+
+        <div class="notes">
+            Declarative Configuration: Terraform uses a declarative configuration syntax to describe the desired state of your infrastructure. This allows you to define infrastructure as code and manage it like software.
+
+            Multi-Cloud Support: Terraform supports multiple cloud providers, including AWS, Azure, Google Cloud Platform, and many others. This allows you to manage your infrastructure across multiple clouds using a single tool.
+
+            Idempotent Operations: Terraform applies changes to your infrastructure in an idempotent manner, meaning that it will only make changes that are necessary to achieve the desired state. This helps prevent unintended changes and reduces the risk of errors.
+
+            Resource Graph: Terraform builds a resource graph that shows the dependencies between resources in your infrastructure. This helps ensure that changes are applied in the correct order and reduces the risk of errors.
+
+            Collaboration: Terraform allows multiple developers to collaborate on the same infrastructure using version control tools like Git. This helps improve productivity and reduce conflicts.
+
+            Third-Party Modules: Terraform has a large and growing ecosystem of third-party modules that provide pre-built infrastructure configurations for common use cases. This can help you get started quickly and reduce the amount of code you need to write.
+
+            Overall, Terraform is a powerful and flexible tool that can help you manage your infrastructure as code, reduce errors, and improve collaboration between developers and operations teams.
+        </div>
+
+    </div>
+
+    <div id="docker" class="step" data-x="10000" data-y="6000" data-scale="1">
+        <h1>Docker</h1>
+
+        <ul>
+            <li>What to consider</li>
+            <li>Why docker?</li>
+        </ul>
+
+        <div class="notes">
+            Portability: Docker containers are lightweight and can run on any system that supports Docker, regardless of the underlying operating system or hardware. This makes it easy to move applications between environments and reduces the risk of compatibility issues.
+
+            Scalability: Docker provides a scalable and consistent environment for running applications. You can easily scale up or down based on demand, and Docker can automatically distribute workloads across multiple containers.
+
+            Efficiency: Docker containers are isolated from each other, which means they can share resources without interfering with each other. This allows you to optimize resource usage and improve efficiency.
+
+            Version Control: Docker provides version control for containers, allowing you to track changes to your application over time and easily roll back to previous versions if needed.
+
+            Collaboration: Docker allows multiple developers to work on the same application simultaneously, with each developer working in their own container. This can help improve collaboration and reduce conflicts.
+
+            Security: Docker provides built-in security features, including container isolation, resource limiting, and network segmentation. This helps protect your applications and data from unauthorized access and cyber threats.
+
+            Overall, Docker provides a lightweight, portable, and efficient way to run and manage applications, with built-in version control, security, and collaboration features.
+        </div>
+
+    </div>
+
+    <div id="bootstrap" class="step" data-x="4000" data-y="4000" data-scale="1">
+        <h1>bootstrap</h1>
+
+        <ul>
+            <li>Where to begin</li>
+            <li>Some caveats</li>
+        </ul>
+
+        <div class="notes">
+            Overwhelming.
+
+            PoC not an enterprize solution 
+
+            Walking skeleton: easier to change something than it is to design it all up-front
+
+            Growing object oriented code guided by tests ... no tests here. :(
+
+            Will walk through this after presentation
+        </div>
+
+    </div>
+
+    <div id="app" class="step" data-x="6000" data-y="4000" data-scale="1">
+        <h1>Application</h1>
+
+        <ul>
+            <li>terminal</li>
+            <li>What is a platform?</li>
+        </ul>
+
+        <div class="notes">
+            In platform engineering, a platform refers to a set of tools, services, and frameworks that are designed to enable developers to build and deploy applications quickly and efficiently. The platform provides a standardized environment and a set of common services that can be used by multiple applications, helping to reduce complexity and increase consistency.
+
+            A platform typically includes components such as computing infrastructure, containerization, orchestration, monitoring, logging, and security. These components are designed to work together seamlessly and are often provided as a service or a set of APIs.
+            
+            The goal of a platform is to provide developers with a set of abstractions that allow them to focus on writing code rather than managing infrastructure. By providing a standardized set of services and tools, the platform can help improve productivity, reduce time to market, and increase the overall quality of applications.
+            
+            In summary, a platform in platform engineering is a set of tools and services that provide a standardized environment for building and deploying applications.
+        </div>
+
+    </div>
+
+    <div id="ECS" class="step" data-x="8000" data-y="4000" data-scale="1">
+        <h1>Elastic Container Service</h1>
+
+        <ul>
+            <li>Fargate</li>
+            <li>Reflections</li>
+        </ul>
+
+        <div class="notes">
+            Serverless is all the hype.
+
+            Fargate provides a serverless compute engine for containers, allowing you to run containerized applications without having to manage the underlying infrastructure.
+
+            Managing a service along with task definitions is a lot of overhead, and you are tightly coupled with AWS's service. I would use EKS doing this over, being able to migrate 
+            to any k8s instance, and leverage helm while still benefiting from Fargate's benefits. --- Custom resource definitions etc ---  
+
+        </div>
+
+    </div>
+
+    <div id="target" class="step" data-x="4000" data-y="2000" data-scale="1">
+        <h1>Target aws footprint</h1>
+        <img id="target-image" src="images/target.png">
+    </div>
+
+    <div id="appflow" class="step" data-x="6000" data-y="2000" data-scale="1">
+        <h1>Suggested initial Application CI</h1>
+        <img id="appflow-image" src="images/appflow.png">
+    </div>
+ 
+    <div id="overview" class="step" data-x="5000" data-y="5000" data-scale="9" style="pointer-events: none;">
+    </div>
+</div>
+
+<div id="impress-toolbar"></div>
+
+<div class="impress-progressbar"><div></div></div>
+<div class="impress-progress"></div>
+
+<div id="impress-help"></div>
+
+
+<script type="text/javascript" src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
